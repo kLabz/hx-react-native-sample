@@ -1,0 +1,15 @@
+#-cmd cp template/App.js bin
+#--next
+
+
+-cp src
+-main Main
+-dce std
+
+-lib quick-enums
+-lib react
+-lib react-native
+-lib react-navigation
+-lib react-native-elements
+
+-js bin/generated/main.js
