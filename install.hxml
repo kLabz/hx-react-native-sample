@@ -1,0 +1,9 @@
+
+
+-lib react-native-elements:git:https://github.com/haxe-react/haxe-react-native-elements
+-lib react-native:git:https://github.com/haxe-react/haxe-react-native
+
+-lib quick-enums
+-lib react
+#maybe react-core should be requested manually... 
+

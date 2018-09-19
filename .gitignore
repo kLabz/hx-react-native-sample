@@ -1,0 +1,4 @@
+**/.haxelib/*
+**/node_modules/*
+.vscode
+**/bin/ios/build/*

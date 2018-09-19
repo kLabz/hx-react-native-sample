@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "react-native-navigation": "1.x.x"
+  },
+
+  "scripts": {
+    "postinstall": "haxelib newrepo && haxelib install --always install.hxml"
+  }
+  
+}
