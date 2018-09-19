@@ -7,6 +7,7 @@ import react.ReactMacro.jsx;
 import react.native.api.StyleSheet;
 import react.native.component.*;
 import react.native.component.Button;
+import reactnative.navigation.Navigation;
 
 typedef HomeProps = {
 	? navigator : reactnative.navigation.Navigator,
@@ -83,9 +84,19 @@ class HomeScene extends ReactComponentOfProps<HomeProps> {
 		}
 	}
 
+	override function componentDidMount() {
+		Navigation.showModal({
+			screen: 'Third',
+			title: "Edit page",
+			passProps: {},
+			animationType: 'slide-up'
+		});
+	}
+
 	override function render() {
 		return jsx('
 			<View style={styles.container} {...viewProps()}>
+				<Image source=${js.Lib.require('./assets/icon_message.png')} />
 				<Text style=${styles.text}>The navigation menu</Text>
 				${renderList()}
 			</View>
