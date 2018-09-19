@@ -8,7 +8,11 @@ import react.native.api.StyleSheet;
 import react.native.component.*;
 import react.native.component.Button;
 
-class HomeScene extends ReactComponent {
+typedef HomeProps = {
+	? navigator : reactnative.navigation.Navigator,
+}
+
+class HomeScene extends ReactComponentOfProps<HomeProps> {
 
 	public static var styles = StyleSheet.create({
 		container: {
@@ -36,7 +40,8 @@ class HomeScene extends ReactComponent {
 	});
 
 	var items:Array<{label:String, value:String}>;
-	function new(props) {
+
+	function new(props:HomeProps) {
 		super(props);
 		state = { }
 
@@ -49,8 +54,15 @@ class HomeScene extends ReactComponent {
 
 	function onPressed(item:{label:String, value:String}, index:Int) {
 		trace('Navigating to ${item.value}');
-		this.props.navigation.navigate(item.value);
-		//onPress=${this.props.navigation.navigate('Item', { title: item.label })}
+		this.props.navigator.push({
+			screen: item.value, // unique ID registered with Navigation.registerScreen
+			title: item.label, // navigation bar title of the pushed screen (optional)
+			subtitle: "sous menu", // navigation bar subtitle of the pushed screen (optional)
+			animated: true, // does the push have transition animation or does it happen immediately (optional)
+			animationType: 'slide-horizontal', // 'fade' (for both) / 'slide-horizontal' (for android) does the push have different transition animation (optional)
+			backButtonTitle: "back to me", // override the back button title (optional)
+			backButtonHidden: false, // hide the back button altogether (optional)
+		});
 	}
 	
 	function renderList() {
@@ -65,9 +77,15 @@ class HomeScene extends ReactComponent {
 		')];
 	}
     
+	function viewProps() : HomeProps {
+		return {
+			navigator: props.navigator,
+		}
+	}
+
 	override function render() {
 		return jsx('
-			<View style={styles.container}>
+			<View style={styles.container} {...viewProps()}>
 				<Text style=${styles.text}>The navigation menu</Text>
 				${renderList()}
 			</View>

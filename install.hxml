@@ -1,0 +1,9 @@
+
+
+# Using "next" version of haxe-react, with strict typing and new features
+-lib react-native-elements:git:https://github.com/haxe-react/haxe-react-native-elements
+-lib react-native:git:https://github.com/haxe-react/haxe-react-native
+
+-lib quick-enums
+-lib react
+
