@@ -90,11 +90,11 @@ scene_Scene1.__super__ = React_Component;
 scene_Scene1.prototype = $extend(React_Component.prototype,{
 	render: function() {
 		var _gthis = this;
-		var renderItem = function(item,index) {
-			return React.createElement(react_native_component_Text,{ },"Toto");
+		var renderItem = function(data) {
+			return React.createElement(react_native_component_Text,{ },data.item.key);
 		};
-		var keyExtractor = function(o,index1) {
-			return o.id + "";
+		var keyExtractor = function(item,index) {
+			return item.id + "";
 		};
 		var id = 0;
 		var _g = [];
@@ -103,13 +103,13 @@ scene_Scene1.prototype = $extend(React_Component.prototype,{
 			var i = _g1++;
 			_g.push("Toto_" + i);
 		}
-		var data = _g.map(function(o1) {
+		var data1 = _g.map(function(o) {
 			id += 1;
-			return { id : id - 1, key : o1};
+			return { id : id - 1, key : o};
 		});
 		return React.createElement(react_native_component_View,{ style : scene_Scene1.styles.container},React.createElement(react_native_component_Text,{ style : scene_Scene1.styles.text},"This is Scene1"),React.createElement(react_native_component_Button,{ style : scene_Scene1.styles.text, onPress : function() {
 			_gthis.props.navigation.goBack();
-		}, title : "Back"}),React.createElement(react_native_component_FlatList,{ keyExtractor : keyExtractor, data : data, renderItem : renderItem}));
+		}, title : "Back"}),React.createElement(react_native_component_FlatList,{ keyExtractor : keyExtractor, data : data1, renderItem : renderItem}));
 	}
 });
 var scene_Scene2 = function(props,context) {

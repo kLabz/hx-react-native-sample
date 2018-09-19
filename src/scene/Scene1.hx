@@ -3,6 +3,7 @@ package scene;
 import react.ReactComponent;
 import react.ReactMacro.jsx;
 import react.native.component.*;
+import react.native.component.FlatList;
 import react.native.api.*;
 
 using Lambda;
@@ -11,12 +12,12 @@ class Scene1 extends ReactComponent {
 	
 	override function render() {
 
-		function renderItem(item:{id:Int, key:String}, index:Int):ReactElement {
-			return jsx('<Text>Toto</Text>');
+		function renderItem(data : { item:{id:Int, key:String}, index:Int} ):ReactElement {
+			return jsx('<Text>${data.item.key}</Text>');
 		}
 		
-		function keyExtractor(o:{key:String, id:Int}, index:Int):String {
-			return o.id+'';
+		function keyExtractor(item:{id:Int, key:String}, index:Int):String {
+			return item.id+'';
 		}
 		
 		var id:Int = 0;
