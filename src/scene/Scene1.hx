@@ -87,7 +87,6 @@ class Scene1 extends ReactComponentOfProps<SceneProps> {
 				</Text>
 				<Button 
 					title="Back" 
-					style={styles.text} 
 					onPress=$goBack
 				/>
 				<FlatList

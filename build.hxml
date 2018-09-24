@@ -3,6 +3,7 @@
 -dce std
 
 -lib quick-enums
+-lib js-object
 -lib react
 -lib react-native
 -lib react-native-elements
