@@ -18,8 +18,8 @@ class Scene3 extends ReactComponentOfProps<SceneProps> {
 		leftButtons: [{ id: 'null' }],
 		rightButtons: [{
 			id: 'close-btn', // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
-			icon: js.Lib.require('./assets/icon_message.png'), // for icon button, provide the local image asset name
-			buttonColor: 'rgb(22,41,76)', // Optional, iOS only. Set color for the button (can also be used in setButtons function to set different button style programatically)
+			icon: js.Lib.require('./assets/icon-message/icon_message.png'), // for icon button, provide the local image asset name
+			//buttonColor: 'rgb(128,41,76)', // Optional, iOS only. Set color for the button (can also be used in setButtons function to set different button style programatically)
 		}]
 	};
 
@@ -59,7 +59,7 @@ class Scene3 extends ReactComponentOfProps<SceneProps> {
 				</Text>
 				<Button 
 					title="Back" 
-					style={styles.text} 
+					color="#ffcc00"
 					onPress=$goBack
 				/>
 			</View>

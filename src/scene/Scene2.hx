@@ -36,12 +36,10 @@ class Scene2 extends ReactComponentOfProps<SceneProps> {
 				</Text>
 				<Button 
 					title="Back" 
-					style={styles.text} 
 					onPress=$goBack
 				/>
 				<Button 
 					title="Goto First screen" 
-					style={styles.text} 
 					onPress=$goFirstScreen
 				/>
 			</View>

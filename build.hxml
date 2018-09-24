@@ -6,5 +6,6 @@
 -lib react
 -lib react-native
 -lib react-native-elements
+-lib js-object
 
 -js bin/index.js

@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.5.0",
     "react-native": "0.57.0",
-    "react-native-navigation": "1.x.x",
-    "img_assets": "file:assets/"
+    "react-native-navigation": "1.x.x"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

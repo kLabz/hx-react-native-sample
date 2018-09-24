@@ -11,7 +11,7 @@ class Main {
 	
 	public static function main() {
 		registerScreens();
-		new App({});
+		var app = new App({});
 	}
 
 	static function registerScreens():Void {
@@ -19,6 +19,8 @@ class Main {
   		Navigation.registerComponent('First', function() return scene.Scene1);
   		Navigation.registerComponent('Second', function() return scene.Scene2);
 		Navigation.registerComponent('Third', function() return scene.Scene3);
+		Navigation.registerComponent('Popup', function() return scene.Popup);
+		Navigation.registerComponent('scene.DrawerMenu', function() return scene.DrawerMenu);
 	}
 
 	public static var styles = StyleSheet.create({
