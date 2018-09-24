@@ -2,13 +2,14 @@ package;
 
 import scene.*;
 import react.ReactComponent;
+import react.ReactNode;
 import react.ReactMacro.jsx;
 import react.native.api.*;
 import react.navigation.StackNavigator;
 import react.native.component.*;
 
 class Main {
-	
+
 	public static function main() {}
 
 	public static var styles = StyleSheet.create({
@@ -48,14 +49,14 @@ class App extends ReactComponent {
 			backgroundColor: '#00FF00',
 		}
 	});
-	
-	var MainStack:StackNavigator;
+
+	var MainStack:ReactNode;
 	var items:Array<{name:String}>;
 	function new(props) {
 		super(props);
 		state = { }
 
-		MainStack = cast StackNavigator.make({
+		MainStack = StackNavigator.make({
 			Home: HomeScene,
 			First: scene.Scene1,
 			Second: scene.Scene2,
@@ -63,7 +64,7 @@ class App extends ReactComponent {
 		}, {
 			initialRouteName: 'Home',
 		});
-		
+
 	}
 	override function render() {
 		return jsx('

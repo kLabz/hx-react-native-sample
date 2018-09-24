@@ -16,7 +16,6 @@ class Scene3 extends ReactComponent {
 				</Text>
 				<Button 
 					title="Back" 
-					style={styles.text} 
 					onPress=${function() { props.navigation.goBack(); }}
 				/>
 			</View>

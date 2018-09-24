@@ -30,7 +30,6 @@ class Scene1 extends ReactComponent {
 				</Text>
 				<Button 
 					title="Back" 
-					style={styles.text} 
 					onPress=${function() { props.navigation.goBack(); }}
 				/>
 				<FlatList

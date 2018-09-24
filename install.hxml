@@ -1,9 +1,7 @@
--lib react:1.4.0
--lib quick-enums:0.1.1
-
+-lib react:git:https://github.com/kLabz/haxe-react
 -lib react-native-elements:0.1.0
-#git:https://github.com/haxe-react/haxe-react-native-elements
--lib react-core:git:https://github.com/haxe-react/haxe-react-core.git
--lib react-native:git:https://github.com/haxe-react/haxe-react-native
-
+-lib react-native:git:https://github.com/kLabz/haxe-react-native
 -lib react-navigation:git:https://github.com/haxe-react/react-navigation.git
+
+-lib quick-enums:0.1.1
+-lib js-object:0.0.4

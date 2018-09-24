@@ -59,7 +59,6 @@ class HomeScene extends ReactComponent {
 			<Button 
 				key=${i}
 				title=${items[i].label}
-				style=${styles.button}
 				onPress=${onPressed.bind(items[i], i)}
 			/>
 		')];
